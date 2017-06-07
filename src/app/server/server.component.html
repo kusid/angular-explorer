@@ -1,10 +1,19 @@
-<div>
-  <p>
-    Server with id {{ serverId }} is {{ getServerStatus() }}!
-  </p>
-  <p>
-    <button class="btn btn-primary" [disabled]="disabled">
-      clickety
-    </button>
-  </p>
+<!--<p>-->
+<!--Server with id {{ serverId }} is {{ getServerStatus() }}!-->
+<!--</p>-->
+<!--<button class="btn btn-primary"-->
+<!--[disabled]="!disabled"-->
+<!--(click)="resetServer()" >-->
+<!--clickety-->
+<!--</button>-->
+<!--<p>{{ serverCreationStatus }}</p>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <button class="btn-block" (click)="resetServer()" [disabled]="username.length === 0">reset!</button>
+      <p>{{ username }}</p>
+    </div>
+  </div>
 </div>
